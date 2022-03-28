@@ -1,5 +1,5 @@
 import os
-import re
+from re import sub
 
 """
 Os objetos dessa classe serão os nós para a árvore binária de huffman
@@ -307,7 +307,7 @@ textoConvertido = ""
 for c in caracteres:
     string = c
     convertido = ' '.join(map(bin, bytearray(string, "utf-8")))
-    convertido = re.sub("b", "", convertido)
+    convertido = sub("b", "", convertido)
     print(f"{c} = {convertido}")
     textoConvertido += convertido
 textoConvertidoBin = bytes(textoConvertido, encoding="utf-8")
