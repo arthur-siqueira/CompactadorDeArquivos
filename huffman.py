@@ -300,11 +300,11 @@ criaArquivo("codigoBinCompact.bin", at.criaTextoBin(listaNos.raiz[0], listaNos.t
 for caractere in lista:
     if caractere not in caracteres:
         caracteres.append(caractere)
-
+print(caracteres)
 
 print("CÓDIGOS BINÁRIOS PARA CADA CARACTERE:")
 textoConvertido = ""
-for c in caracteres:
+for c in pegaTexto("texto.txt"):
     string = c
     convertido = ' '.join(map(bin, bytearray(string, "utf-8")))
     convertido = sub("b", "", convertido)
