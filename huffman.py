@@ -300,7 +300,7 @@ criaArquivo("codigoBinCompact.bin", at.criaTextoBin(listaNos.raiz[0], listaNos.t
 for caractere in lista:
     if caractere not in caracteres:
         caracteres.append(caractere)
-print(caracteres)
+
 
 print("CÓDIGOS BINÁRIOS PARA CADA CARACTERE:")
 textoConvertido = ""
