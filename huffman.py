@@ -303,13 +303,19 @@ for caractere in lista:
 
 
 print("CÓDIGOS BINÁRIOS PARA CADA CARACTERE:")
+for c in caracteres:
+    string = c
+    convertido = ' '.join(map(bin, bytearray(string, "utf-8")))
+    convertido = sub("b", "", convertido)
+    print(f"{c} = {convertido}")
+
 textoConvertido = ""
 for c in pegaTexto("texto.txt"):
     string = c
     convertido = ' '.join(map(bin, bytearray(string, "utf-8")))
     convertido = sub("b", "", convertido)
-    print(f"{c} = {convertido}")
     textoConvertido += convertido
+
 textoConvertidoBin = bytes(textoConvertido, encoding="utf-8")
 
 criaArquivo("original.bin", textoConvertidoBin)
